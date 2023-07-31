@@ -6,6 +6,15 @@
 
 }
 
+.container {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically (column) */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    height: 100vh; /* Make the container take the full viewport height */
+}
+
+
 .input-field::placeholder,
 .input-answer::placeholder {
     color: black; /* Font color for the placeholder text */
