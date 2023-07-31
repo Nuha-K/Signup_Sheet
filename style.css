@@ -24,10 +24,20 @@
 {
     height: 100%;
     width: 100%;
-    background-image: url(v1013-p-0009a.jpg);
+    background-image: url(annie-spratt-dWYU3i-mqEo-unsplash.jpg);
     background-position: center;
     background-size: cover;
     position: absolute;
+}
+
+.color-filter {
+    position: absolute; /* Position the layer on top of the background image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(187, 0, 255, 0.5); /* Replace with your desired color and opacity */
+    /* The above rgba value means red color with 50% opacity */
 }
 
 .move-text
@@ -55,14 +65,14 @@
 
 .form-box
 {
-    width: 600px;
-    height: 555px;
+    width: 400px;
+    height: 540px;
     position: relative;
     margin: 6% auto;
-    background-color: #eba93f;
+    background-color: rgb(230, 214, 229);
     padding: 5px;
     overflow: hidden;
-    border-radius: 5%;
+
 }
 
 
