@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join the Club!</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto:ital,wght@1,300&display=swap');
+    </style>
 </head>
+
 <body>
     <div class="container">
-    <div class="hero">
-        <div class="color-filter"></div>
-        <p class="move-text">SignUp Sheet!</p>
-        <div class="form-box">
-            <form id="register">
-                <input type="text" class="input-field" placeholder="Name" required>
-                <input type="email" class="input-field" id="email" placeholder="Email ID" required>
-                <input type="email" class="input-field" id="confirmEmail" placeholder="Confirm Email ID" required>
-                <input type="number" class="input-field" placeholder="Age" required>
-                <input type="text" class="input-field" placeholder="What is your major?" required>
-                <textarea class="input-answer" placeholder="Why do you want to join the club?" required></textarea>
-                <button type="submit" class="submit-btn">Register</button>
-                <div id="error-message"></div>
-            </form>
-            <script>
-                const emailInput = document.getElementById("email");
-                const confirmEmailInput = document.getElementById("confirmEmail");
-                const errorMessage = document.getElementById("error-message");
-            
-                function validateEmail() {
-                    if (emailInput.value !== confirmEmailInput.value) {
-                        errorMessage.textContent = "Emails do not match";
-                        
-                        return false;
-                    } else {
-                        errorMessage.textContent = "";
-                        return true;
+        <div class="hero">
+            <div class="color-filter"></div>
+            <h1 class="heading">Sign up Today!</h1>
+            <h2 class="sub-heading">Become apart of the team!</h2>
+            <div class="form-box">
+                <form id="register">
+                    <input type="text" class="input-field" placeholder="Name" required>
+                    <input type="email" class="input-field" id="email" placeholder="Email ID" required>
+                    <input type="email" class="input-field" id="confirmEmail" placeholder="Confirm Email ID" required>
+                    <input type="number" class="input-field" placeholder="Age" required>
+                    <input type="text" class="input-field" placeholder="What is your major?" required>
+                    <textarea class="input-answer" placeholder="Why do you want to join the club?" required></textarea>
+                    <button type="submit" class="submit-btn">Register</button>
+                    <div id="error-message"></div>
+                </form>
+                <script>
+                    const emailInput = document.getElementById("email");
+                    const confirmEmailInput = document.getElementById("confirmEmail");
+                    const errorMessage = document.getElementById("error-message");
+
+                    function validateEmail() {
+                        if (emailInput.value !== confirmEmailInput.value) {
+                            errorMessage.textContent = "Emails do not match";
+
+                            return false;
+                        } else {
+                            errorMessage.textContent = "";
+                            return true;
+                        }
                     }
-                }
-            
-                const form = document.getElementById("register");
-                form.addEventListener("submit", function (event) {
-                    if (!validateEmail()) {
-                        event.preventDefault();
-                        
-                    }
-                });
-            </script>
-            
+
+                    const form = document.getElementById("register");
+                    form.addEventListener("submit", function (event) {
+                        if (!validateEmail()) {
+                            event.preventDefault();
+
+                        }
+                    });
+                </script>
+
+            </div>
         </div>
     </div>
-</div>
 </body>
+
 </html>
